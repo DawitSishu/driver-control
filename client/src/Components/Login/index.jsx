@@ -48,7 +48,7 @@ const index = () => {
       component="form"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <Typography variant="h5" align="center" color="primary" fontWeight="bold">
+      <Typography variant="h5" align="center" color="secondary" fontWeight="bold">
         Log In To Your Account
       </Typography>
       <br />
@@ -108,7 +108,7 @@ const index = () => {
         </Typography>
       )}
       <br />
-      <Button type="submit" variant="contained">
+      <Button type="submit" variant="contained"color="secondary">
         Log In
       </Button>
     </Box>

@@ -33,8 +33,8 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<LogIn />} /> */}
-          <Route path="/" element={<Admin />} />
+          <Route path="/" element={<LogIn />} />
+          {/* <Route path="/" element={<Admin />} /> */}
           {/* <Route path="/" element={<Employee />} /> */}
           {/* <Route path="/" element={<User />} /> */}
         </Routes>
