@@ -34,9 +34,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LogIn />} />
-          {/* <Route path="/" element={<Admin />} /> */}
-          {/* <Route path="/" element={<Employee />} /> */}
-          {/* <Route path="/" element={<User />} /> */}
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/employee" element={<Employee />} />
+          <Route path="/user" element={<User />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

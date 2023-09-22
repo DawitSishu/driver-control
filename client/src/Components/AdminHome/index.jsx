@@ -24,13 +24,14 @@ import Spinner from "../Spinner/Spinner";
 const drawerWidth = 240;
 
 const iconMap = {
-  Profile: <AccountCircle  color="secondary"/>,
+  Profile: <AccountCircle color="secondary" />,
   Employees: <Group color="secondary" />,
   Registrations: <Edit color="secondary" />,
   "Create Employee": <PersonAdd color="secondary" />,
 };
 const index = (props) => {
   const { window } = props;
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Profile");
 
@@ -42,6 +43,15 @@ const index = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  
+
+  useEffect(() => {
+    var role = localStorage.getItem("role");
+    if (!role || role != "admin") {
+      navigate('/')
+    }
+  }, []);
 
   const drawer = (
     <div>
@@ -88,7 +98,9 @@ const index = (props) => {
           <Typography variant="h6" noWrap component="div">
             Admin Panel
           </Typography>
-          <Button variant="outlined" color="inherit">Log out</Button>
+          <Button variant="outlined" color="inherit">
+            Log out
+          </Button>
         </Toolbar>
       </AppBar>
       <Box
